@@ -11,8 +11,10 @@ public class PasswordAssistancePage {
 	@FindBy(xpath=".//*[@id='passwordReset']/div[2]/div/form/h2")
 	WebElement h2PasswordAssistance;
 	
+	@FindBy(xpath=".//*[@id='pwdResetForm2']/div")
+	WebElement lblPasswordResetSuccessMsg;
 	@FindBy(xpath=".//*[@id='pwdResetForm1']/div[2]")
-	WebElement lblPasswordResetMsg;
+	WebElement lblPasswordResetFailureMsg;
 	
 	@FindBy(xpath=".//*[@id='pwdResetForm1']/div[1]/input")
 	WebElement txtEmail;
@@ -39,9 +41,22 @@ public class PasswordAssistancePage {
 		}
 	}
 	
-	public boolean verifyPasswordReset(String alertMsg) {
+	public boolean verifyPasswordResetFailure(String alertMsg) {
 		try{
-			if(lblPasswordResetMsg.getText().equals(alertMsg)){
+			if(lblPasswordResetFailureMsg.getText().equals(alertMsg)){
+				return true;
+			}else{
+				return false;
+			}
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+			return false;
+		}
+	}
+	
+	public boolean verifyPasswordResetSuccess(String alertMsg) {
+		try{
+			if(lblPasswordResetSuccessMsg.getText().equals(alertMsg)){
 				return true;
 			}else{
 				return false;

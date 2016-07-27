@@ -32,3 +32,4 @@ Feature: To test the Sign In functionality
       | Email    | srinimarva@gmail.com |
       | Password |                      |
     Then I should see an alert message saying "Email and/or password incorrect. Please try again or reset your password."
+    And I close the browser

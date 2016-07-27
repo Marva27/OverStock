@@ -10,26 +10,32 @@ formatter.feature({
       "value": "#Email: srinimarva@gmail.com"
     }
   ],
-  "line": 3,
+  "line": 4,
   "name": "To test the Forgot Password functionality",
   "description": "",
   "id": "to-test-the-forgot-password-functionality",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "line": 3,
+      "name": "@ForgotPassword"
+    }
+  ]
 });
 formatter.background({
-  "line": 5,
+  "line": 6,
   "name": "",
   "description": "",
   "type": "background",
   "keyword": "Background"
 });
 formatter.step({
-  "line": 6,
+  "line": 7,
   "name": "I open \"Chrome\" browser to execute \"ForgotPassword\" test",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 7,
+  "line": 8,
   "name": "I connect to \"http://www.overstock.com\" website",
   "keyword": "And "
 });
@@ -47,7 +53,7 @@ formatter.match({
   "location": "CommonStepDefs.i_Open_Browser(String,String)"
 });
 formatter.result({
-  "duration": 980518629,
+  "duration": 3398704303,
   "status": "passed"
 });
 formatter.match({
@@ -60,12 +66,11 @@ formatter.match({
   "location": "CommonStepDefs.i_Connect_URL(String)"
 });
 formatter.result({
-  "duration": 675839,
-  "error_message": "java.lang.NullPointerException\n\tat com.srinimarva.overstock.stepdefs.common.CommonStepDefs.i_Connect_URL(CommonStepDefs.java:32)\n\tat ✽.And I connect to \"http://www.overstock.com\" website(com/srinimarva/overstock/features/customer/ForgotPassword.feature:7)\n",
-  "status": "failed"
+  "duration": 5094828777,
+  "status": "passed"
 });
 formatter.scenario({
-  "line": 9,
+  "line": 10,
   "name": "Retrieve forgotten password with valid email address",
   "description": "",
   "id": "to-test-the-forgot-password-functionality;retrieve-forgotten-password-with-valid-email-address",
@@ -73,149 +78,25 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 10,
-  "name": "I navigate to Sign In page to execute \"ForgotPassword\" test",
-  "keyword": "Given "
-});
-formatter.step({
   "line": 11,
-  "name": "I click the Forgot your password? link",
-  "keyword": "When "
+  "name": "I am on Password Assistance page",
+  "keyword": "Given "
 });
 formatter.step({
   "line": 12,
-  "name": "I should see Password Assistance page",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 13,
-  "name": "I enter a valid",
-  "keyword": "When "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "ForgotPassword",
-      "offset": 39
-    }
-  ],
-  "location": "SignIn.navigateToSignInPage(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.uri("com/srinimarva/overstock/features/customer/SignIn.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Srinivasan Ramu"
-    },
-    {
-      "line": 2,
-      "value": "#Email: srinimarva@gmail.com"
-    }
-  ],
-  "line": 3,
-  "name": "To test the Sign In functionality",
-  "description": "",
-  "id": "to-test-the-sign-in-functionality",
-  "keyword": "Feature"
-});
-formatter.background({
-  "line": 5,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 6,
-  "name": "I open \"Mozilla\" browser to execute \"SignIn\" test",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 7,
-  "name": "I connect to \"http://www.overstock.com\" website",
-  "keyword": "And "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Mozilla",
-      "offset": 8
-    },
-    {
-      "val": "SignIn",
-      "offset": 37
-    }
-  ],
-  "location": "CommonStepDefs.i_Open_Browser(String,String)"
-});
-formatter.result({
-  "duration": 7590023244,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "http://www.overstock.com",
-      "offset": 14
-    }
-  ],
-  "location": "CommonStepDefs.i_Connect_URL(String)"
-});
-formatter.result({
-  "duration": 8708878728,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 9,
-  "name": "Attemp sign in with valid credentials",
-  "description": "",
-  "id": "to-test-the-sign-in-functionality;attemp-sign-in-with-valid-credentials",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 10,
-  "name": "I navigate to Sign In page to execute \"SignIn\" test",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 11,
-  "name": "I enter credentials and hit Sign In button",
+  "name": "I enter a Email Address and hit Reset Password button",
   "rows": [
     {
       "cells": [
         "Field",
         "Value"
       ],
-      "line": 12
+      "line": 13
     },
     {
       "cells": [
         "Email",
         "srinimarva@gmail.com"
-      ],
-      "line": 13
-    },
-    {
-      "cells": [
-        "Password",
-        "Orange@7"
       ],
       "line": 14
     }
@@ -224,84 +105,68 @@ formatter.step({
 });
 formatter.step({
   "line": 15,
-  "name": "I should see Hi Customer Name",
-  "rows": [
-    {
-      "cells": [
-        "Field",
-        "Value"
-      ],
-      "line": 16
-    },
-    {
-      "cells": [
-        "CustomerName",
-        "Srinivasan"
-      ],
-      "line": 17
-    }
-  ],
+  "name": "I should see a message saying including \"srinimarva@gmail.com\"",
   "keyword": "Then "
+});
+formatter.match({
+  "location": "ForgotPassword.navigateToPasswordAssistancePage()"
+});
+formatter.result({
+  "duration": 3454185999,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ForgotPassword.attemptPasswordReset(DataTable)"
+});
+formatter.result({
+  "duration": 1387736596,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "SignIn",
-      "offset": 39
+      "val": "srinimarva@gmail.com",
+      "offset": 41
     }
   ],
-  "location": "SignIn.navigateToSignInPage(String)"
+  "location": "ForgotPassword.successfulPasswordReset(String)"
 });
 formatter.result({
-  "duration": 1769817346,
-  "status": "passed"
-});
-formatter.match({
-  "location": "SignIn.attemptLogin(DataTable)"
-});
-formatter.result({
-  "duration": 2161701765,
-  "status": "passed"
-});
-formatter.match({
-  "location": "SignIn.greetCustomer(DataTable)"
-});
-formatter.result({
-  "duration": 78639876,
+  "duration": 220134015,
   "status": "passed"
 });
 formatter.background({
-  "line": 5,
+  "line": 6,
   "name": "",
   "description": "",
   "type": "background",
   "keyword": "Background"
 });
 formatter.step({
-  "line": 6,
-  "name": "I open \"Mozilla\" browser to execute \"SignIn\" test",
+  "line": 7,
+  "name": "I open \"Chrome\" browser to execute \"ForgotPassword\" test",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 7,
+  "line": 8,
   "name": "I connect to \"http://www.overstock.com\" website",
   "keyword": "And "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Mozilla",
+      "val": "Chrome",
       "offset": 8
     },
     {
-      "val": "SignIn",
-      "offset": 37
+      "val": "ForgotPassword",
+      "offset": 36
     }
   ],
   "location": "CommonStepDefs.i_Open_Browser(String,String)"
 });
 formatter.result({
-  "duration": 170395,
+  "duration": 4188844,
   "status": "passed"
 });
 formatter.match({
@@ -314,81 +179,86 @@ formatter.match({
   "location": "CommonStepDefs.i_Connect_URL(String)"
 });
 formatter.result({
-  "duration": 3997338167,
+  "duration": 4450074261,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 19,
-  "name": "Attemp sign in without valid Email Address",
+  "line": 17,
+  "name": "Retrieve forgotten password with invalid email address",
   "description": "",
-  "id": "to-test-the-sign-in-functionality;attemp-sign-in-without-valid-email-address",
+  "id": "to-test-the-forgot-password-functionality;retrieve-forgotten-password-with-invalid-email-address",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 20,
-  "name": "I navigate to Sign In page to execute \"SignIn\" test",
+  "line": 18,
+  "name": "I am on Password Assistance page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 21,
-  "name": "I enter credentials and hit Sign In button",
+  "line": 19,
+  "name": "I enter a Email Address and hit Reset Password button",
   "rows": [
     {
       "cells": [
         "Field",
         "Value"
       ],
-      "line": 22
+      "line": 20
     },
     {
       "cells": [
         "Email",
         ""
       ],
-      "line": 23
-    },
-    {
-      "cells": [
-        "Password",
-        "Orange@7"
-      ],
-      "line": 24
+      "line": 21
     }
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 25,
-  "name": "I should see an alert message saying \"This email address is invalid.\"",
+  "line": 22,
+  "name": "I should see a message saying \"Your e-mail address is not in our system.\"",
   "keyword": "Then "
 });
+formatter.step({
+  "line": 23,
+  "name": "I close the browser",
+  "keyword": "And "
+});
 formatter.match({
-  "arguments": [
-    {
-      "val": "SignIn",
-      "offset": 39
-    }
-  ],
-  "location": "SignIn.navigateToSignInPage(String)"
+  "location": "ForgotPassword.navigateToPasswordAssistancePage()"
 });
 formatter.result({
-  "duration": 1808373944,
+  "duration": 1678943572,
   "status": "passed"
 });
 formatter.match({
-  "location": "SignIn.attemptLogin(DataTable)"
+  "location": "ForgotPassword.attemptPasswordReset(DataTable)"
 });
 formatter.result({
-  "duration": 451174368,
+  "duration": 997656126,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "This email address is invalid.",
-      "offset": 38
+      "val": "Your e-mail address is not in our system.",
+      "offset": 31
     }
   ],
-  "location": "SignIn.seeAlertMsg(String)"
+  "location": "ForgotPassword.failurePasswordReset(String)"
+});
+formatter.result({
+  "duration": 64748859,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SignIn.i_close_the_browser()"
+});
+formatter.result({
+  "duration": 1289180,
+  "error_message": "java.lang.NullPointerException\n\tat com.srinimarva.overstock.stepdefs.customer.SignIn.i_close_the_browser(SignIn.java:67)\n\tat ✽.And I close the browser(com/srinimarva/overstock/features/customer/ForgotPassword.feature:23)\n",
+  "status": "failed"
+});
 });

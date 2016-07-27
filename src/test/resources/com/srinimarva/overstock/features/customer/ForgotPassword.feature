@@ -12,7 +12,7 @@ Feature: To test the Forgot Password functionality
     When I enter a Email Address and hit Reset Password button
       | Field | Value                |
       | Email | srinimarva@gmail.com |
-    Then I should see a message saying "Instructions to reset your password have been sent to your email address" Email Address entered
+    Then I should see a message saying including "srinimarva@gmail.com"
 
   Scenario: Retrieve forgotten password with invalid email address
     Given I am on Password Assistance page

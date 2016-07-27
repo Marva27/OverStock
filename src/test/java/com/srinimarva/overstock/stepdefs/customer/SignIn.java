@@ -28,11 +28,11 @@ public class SignIn {
 	SignInPage signInPage;
 	MainPage mainPage;
 	
-	@Given("^I navigate to Sign In page $")
+	@Given("^I navigate to Sign In page$")
 	public void navigateToSignInPage() throws IOException {
 		SignIn signIn = new SignIn();
 		Class classSignIn = signIn.getClass();
-		utility=Utility.getInstance(classSignIn.getName());
+		utility=Utility.getInstance(classSignIn.getSimpleName());
 	    browser = Utility.getBrowser(utility);
 	    homePage = PageFactory.initElements(browser, HomePage.class);
 	    homePage.navigateToSignIn(browser);
@@ -60,6 +60,11 @@ public class SignIn {
 	@Then("^I should see an alert message saying \"([^\"]*)\"$")
 	public void seeAlertMsg(String alertMsg) {
 		Assert.assertTrue("Invalid login attempt"+"-"+alertMsg, signInPage.verifyAlertMsg(browser, alertMsg));
+	}
+	
+	@Then("^I close the browser$")
+	public void i_close_the_browser() {
+	    browser.quit();
 	}
 
 }
