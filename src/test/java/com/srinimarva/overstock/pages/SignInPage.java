@@ -1,9 +1,11 @@
 package com.srinimarva.overstock.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SignInPage {
 	
@@ -36,7 +38,9 @@ public class SignInPage {
 	public boolean verifyAlertMsg(WebDriver browser, String alertMsg) {
 		try{
 			btnSignIn.click();
-			PageFactory.initElements(browser, SignInPage.class);
+			WebDriverWait wait = new WebDriverWait(browser, 10);
+			wait.until(ExpectedConditions.visibilityOf(browser.findElement(By.id("msgIdmmrka"))));
+			//PageFactory.initElements(browser, SignInPage.class);
 			System.out.println(lblAlertMsg.getText());
 			if(lblAlertMsg.getText().trim().equals(alertMsg)){
 				System.out.println(lblAlertMsg.getText().trim());
