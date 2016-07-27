@@ -47,7 +47,7 @@ formatter.match({
   "location": "CommonStepDefs.i_Open_Browser(String,String)"
 });
 formatter.result({
-  "duration": 6677858860,
+  "duration": 5847073837,
   "status": "passed"
 });
 formatter.match({
@@ -60,7 +60,7 @@ formatter.match({
   "location": "CommonStepDefs.i_Connect_URL(String)"
 });
 formatter.result({
-  "duration": 6630432532,
+  "duration": 4699298398,
   "status": "passed"
 });
 formatter.scenario({
@@ -135,21 +135,21 @@ formatter.match({
   "location": "SignIn.navigateToSignInPage(String)"
 });
 formatter.result({
-  "duration": 3075881520,
+  "duration": 2514102203,
   "status": "passed"
 });
 formatter.match({
   "location": "SignIn.attemptLogin(DataTable)"
 });
 formatter.result({
-  "duration": 2187104751,
+  "duration": 2579189396,
   "status": "passed"
 });
 formatter.match({
   "location": "SignIn.greetCustomer(DataTable)"
 });
 formatter.result({
-  "duration": 280031133,
+  "duration": 78657503,
   "status": "passed"
 });
 formatter.background({
@@ -183,7 +183,7 @@ formatter.match({
   "location": "CommonStepDefs.i_Open_Browser(String,String)"
 });
 formatter.result({
-  "duration": 218800,
+  "duration": 163866,
   "status": "passed"
 });
 formatter.match({
@@ -196,7 +196,7 @@ formatter.match({
   "location": "CommonStepDefs.i_Connect_URL(String)"
 });
 formatter.result({
-  "duration": 4309377962,
+  "duration": 4052601493,
   "status": "passed"
 });
 formatter.scenario({
@@ -255,14 +255,14 @@ formatter.match({
   "location": "SignIn.navigateToSignInPage(String)"
 });
 formatter.result({
-  "duration": 1813714990,
+  "duration": 2265876582,
   "status": "passed"
 });
 formatter.match({
   "location": "SignIn.attemptLogin(DataTable)"
 });
 formatter.result({
-  "duration": 316907975,
+  "duration": 312979096,
   "status": "passed"
 });
 formatter.match({
