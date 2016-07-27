@@ -7,18 +7,14 @@ Feature: To test the Forgot Password functionality
     And I connect to "http://www.overstock.com" website
 
   Scenario: Retrieve forgotten password with valid email address
-    Given I am on Sign In page
-    When I click the Forgot your password? link
-    Then I should see Password Assistance page
+    Given I am on Password Assistance page
     When I enter a Email Address and hit Reset Password button
       | Field | Value                |
       | Email | srinimarva@gmail.com |
     Then I should see a message saying "Instructions to reset your password have been sent to your email address" Email Address entered
 
   Scenario: Retrieve forgotten password with invalid email address
-    Given I am on Sign In page
-    When I click the Forgot your password? link
-    Then I should see Password Assistance page
+    Given I am on Password Assistance page
     When I enter a Email Address and hit Reset Password button
       | Field | Value |
       | Email |       |
