@@ -39,12 +39,8 @@ public class SignInPage {
 		try{
 			btnSignIn.click();
 			WebDriverWait wait = new WebDriverWait(browser, 10);
-			wait.until(ExpectedConditions.visibilityOf(browser.findElement(By.id("msgIdmmrka"))));
-			//PageFactory.initElements(browser, SignInPage.class);
-			System.out.println(lblAlertMsg.getText());
-			if(lblAlertMsg.getText().trim().equals(alertMsg)){
-				System.out.println(lblAlertMsg.getText().trim());
-				System.out.println(alertMsg);
+			String expectedText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".page-errors .message"))).getText();
+			if(expectedText.equals(alertMsg)){
 				return true;
 			}else{
 				return false;
@@ -52,6 +48,14 @@ public class SignInPage {
 		}catch(Exception e){
 			System.out.println(e.getMessage());
 			return false;
+		}
+	}
+	
+	public void clickForgotPassword(){
+		try{
+			linkForgotPassword.click();
+		}catch(Exception e){
+			System.out.println(e.getMessage());
 		}
 	}
 

@@ -27,9 +27,11 @@ Utility utility;
 	SignInPage signInPage;
 	MainPage mainPage;
 	
-	@Given("^I navigate to Sign In page to execute \"([^\"]*)\" test$")
-	public void navigateToSignInPage(String featureName) throws IOException {
-		utility=Utility.getInstance(featureName);
+	@Given("^I navigate to Sign In page $")
+	public void navigateToSignInPage() throws IOException {
+		SignIn signIn = new SignIn();
+		Class classSignIn = signIn.getClass();
+		utility=Utility.getInstance(classSignIn.getName());
 	    browser = Utility.getBrowser(utility);
 	    homePage = PageFactory.initElements(browser, HomePage.class);
 	    homePage.navigateToSignIn(browser);
