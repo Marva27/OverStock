@@ -1,5 +1,6 @@
 #Author: Srinivasan Ramu
 #Email: srinimarva@gmail.com
+@ForgotPassword
 Feature: To test the Forgot Password functionality
 
   Background: 
