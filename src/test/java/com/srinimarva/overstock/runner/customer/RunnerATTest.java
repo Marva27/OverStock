@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/resources",
 glue={"com.srinimarva.overstock.stepdefs.common","com.srinimarva.overstock.stepdefs.customer"},
-format={"json:target/cucumber.json"},
+format={"pretty","json:target/cucumber.json"},
 tags={"@SignIn,@ForgotPassword"})
 public class RunnerATTest {
 
