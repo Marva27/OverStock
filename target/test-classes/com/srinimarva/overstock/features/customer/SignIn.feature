@@ -1,5 +1,6 @@
 #Author: Srinivasan Ramu
 #Email: srinimarva@gmail.com
+@SignIn
 Feature: To test the Sign In functionality
 
   Background: 
