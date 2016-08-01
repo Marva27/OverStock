@@ -17,8 +17,8 @@ Feature: To test the Change Password functionality
     Then I should see "Email Address & Password" page
     When I enter Current Password, New Password, Confirm Password and hit the Save button
       | Field            | Value    |
-      | New Password     | Ginger@7 |
-      | Confirm Password | Ginger@7 |
+      | New Password     | Orange@7 |
+      | Confirm Password | Orange@7 |
     Then I should see "Success! Your password has been updated." and I sign out of my account
     When I login to my account
     Then I should see Hi Customer Name
