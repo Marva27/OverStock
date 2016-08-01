@@ -4,7 +4,7 @@
 Feature: To test the Forgot Password functionality
 
   Background: 
-    Given I open "Chrome" browser to execute "ForgotPassword" test
+    Given I open "Mozilla" browser to execute "ForgotPassword" test
     And I connect to "http://www.overstock.com" website
 
   Scenario: Retrieve forgotten password with valid email address

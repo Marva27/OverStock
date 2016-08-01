@@ -94,10 +94,5 @@ public class ChangePassword {
 		emailAddressAndPasswordPage = PageFactory.initElements(browser, EmailAddressAndPasswordPage.class);
 		Assert.assertTrue("Password updated failed.",emailAddressAndPasswordPage.verifyFailureMsg(failureMsg));
 	}
-	
-	@After
-	public void quitBrowser() {
-		browser.quit();
-	}
 
 }

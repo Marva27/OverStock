@@ -4,7 +4,7 @@
 Feature: To test the Sign In functionality
 
   Background: 
-    Given I open "Chrome" browser to execute "SignIn" test
+    Given I open "Mozilla" browser to execute "SignIn" test
     And I connect to "http://www.overstock.com" website
 
   Scenario: Attemp sign in with valid credentials

@@ -67,10 +67,5 @@ public class ForgotPassword {
 	public void failurePasswordReset(String alertMsg) {
 	   Assert.assertTrue("Password reset failed because of "+alertMsg,passwordAssistancePage.verifyPasswordResetFailure(alertMsg));
 	}
-	
-	@After
-	public void quitBrowser() {
-		browser.quit();
-	}
 
 }

@@ -4,8 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
 	
@@ -34,8 +32,9 @@ public class HomePage {
 	public void navigateToSignIn(WebDriver browser){
 		try{
 			Actions actions = new Actions(browser);
-			actions.moveToElement(linkAccount).click().build().perform();
-			//actions.moveToElement(btnSignIn).click().build().perform();
+			//linkAccount.click();
+			actions.moveToElement(linkAccount).build().perform();
+			actions.moveToElement(btnSignIn).click().build().perform();
 			actions.moveToElement(linkGetPaidToShop).build().perform();
 		}catch(Exception e){
 			System.out.println(e.getMessage());

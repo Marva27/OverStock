@@ -62,10 +62,5 @@ public class SignIn {
 	public void seeAlertMsg(String alertMsg) {
 		Assert.assertTrue("Invalid login attempt"+"-"+alertMsg, signInPage.verifyAlertMsg(browser, alertMsg));
 	}
-	
-	@After
-	public void quitBrowser() {
-		browser.quit();
-	}
 
 }

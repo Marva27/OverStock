@@ -4,7 +4,7 @@
 Feature: To test the Change Password functionality
 
   Background: 
-    Given I open "Chrome" browser to execute "ChangePassword" test
+    Given I open "Mozilla" browser to execute "ChangePassword" test
     When I connect to "http://www.overstock.com" website
     And I login to my account
     Then I should see Hi Customer Name
