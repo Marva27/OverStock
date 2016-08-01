@@ -32,7 +32,7 @@ Feature: To test the Change Password functionality
     When I enter Current Password, New Password, Confirm Password and hit the Save button
       | Field            | Value    |
       | New Password     | Orange@7 |
-      | Confirm Password | Orange@9 |
+      | Confirm Password | Orange@11 |
     Then I should see "We're sorry. The passwords you have entered do not match. Please re-enter a new password."
 
   Scenario: Change password NOT satisfying the standards
