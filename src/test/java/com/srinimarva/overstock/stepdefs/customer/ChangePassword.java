@@ -18,6 +18,7 @@ import com.srinimarva.overstock.pages.MyAccountPage;
 import com.srinimarva.overstock.util.Utility;
 
 import cucumber.api.DataTable;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -92,6 +93,11 @@ public class ChangePassword {
 	public void seeFailureMsg(String failureMsg) {
 		emailAddressAndPasswordPage = PageFactory.initElements(browser, EmailAddressAndPasswordPage.class);
 		Assert.assertTrue("Password updated failed.",emailAddressAndPasswordPage.verifyFailureMsg(failureMsg));
+	}
+	
+	@After
+	public void quitBrowser() {
+		browser.quit();
 	}
 
 }

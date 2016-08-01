@@ -14,6 +14,7 @@ import com.srinimarva.overstock.pages.SignInPage;
 import com.srinimarva.overstock.util.Utility;
 
 import cucumber.api.DataTable;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -62,9 +63,9 @@ public class SignIn {
 		Assert.assertTrue("Invalid login attempt"+"-"+alertMsg, signInPage.verifyAlertMsg(browser, alertMsg));
 	}
 	
-	@Then("^I close the browser$")
-	public void i_close_the_browser() {
-	    browser.quit();
+	@After
+	public void quitBrowser() {
+		browser.quit();
 	}
 
 }

@@ -14,6 +14,7 @@ import com.srinimarva.overstock.pages.SignInPage;
 import com.srinimarva.overstock.util.Utility;
 
 import cucumber.api.DataTable;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -65,6 +66,11 @@ public class ForgotPassword {
 	@Then("^I should see a message saying \"([^\"]*)\"$")
 	public void failurePasswordReset(String alertMsg) {
 	   Assert.assertTrue("Password reset failed because of "+alertMsg,passwordAssistancePage.verifyPasswordResetFailure(alertMsg));
+	}
+	
+	@After
+	public void quitBrowser() {
+		browser.quit();
 	}
 
 }

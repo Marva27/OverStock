@@ -34,8 +34,8 @@ public class HomePage {
 	public void navigateToSignIn(WebDriver browser){
 		try{
 			Actions actions = new Actions(browser);
-			actions.moveToElement(linkAccount).build().perform();
-			actions.moveToElement(btnSignIn).click().build().perform();
+			actions.moveToElement(linkAccount).click().build().perform();
+			//actions.moveToElement(btnSignIn).click().build().perform();
 			actions.moveToElement(linkGetPaidToShop).build().perform();
 		}catch(Exception e){
 			System.out.println(e.getMessage());
