@@ -21,7 +21,7 @@ Feature: To test the Sign In functionality
     Given I navigate to Sign In page
     When I enter credentials and hit Sign In button
       | Field    | Value    |
-      | Email    |          |
+      | Email    | srini    |
       | Password | Orange@7 |
     Then I should see an alert message saying "This email address is invalid."
 
