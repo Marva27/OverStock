@@ -20,4 +20,3 @@ Feature: To test the Forgot Password functionality
       | Field | Value |
       | Email |       |
     Then I should see a message saying "Your e-mail address is not in our system."
-    And I close the browser

@@ -44,4 +44,3 @@ Feature: To test the Change Password functionality
       | New Password     | Apple |
       | Confirm Password | Apple |
     Then I should see "We're sorry. Passwords must be a minimum of nine characters."
-    And I close the browser
